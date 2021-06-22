@@ -8,7 +8,7 @@ public static void main(String[] args)
 
 System.out.println("Welcome to Line Comparison");
 Scanner s = new Scanner(System.in);
-                System.out.println("Enter x co-ordinate of first point: ");
+		System.out.println("Enter x co-ordinate of first point: ");
 		int x1 = s.nextInt();
 		System.out.println("Enter y co-ordinate of first point: ");
 		int y1 = s.nextInt();
@@ -31,11 +31,19 @@ Scanner s = new Scanner(System.in);
 
 		System.out.printf("length of 1st end points are : %.2f %n", length_of_line1);
 		System.out.printf("length of 2nd end points are : %.2f %n", length_of_line2);
-		boolean ans = length_of_line1.equals(length_of_line2);
-		if(ans)
-			System.out.println("Both lines are equal.");
+		//boolean ans = length_of_line1.equals(length_of_line2);
+	//	if(ans)
+	//		System.out.println("Both lines are equal.");
+	//	else
+	//		System.out.println("Both lines are not equal.");
+int res = length_of_line1.compareTo(length_of_line2);
+		if(res > 0)
+			System.out.println("Length of first end points is greater than length of second end points");
+		else if(res < 0)
+			System.out.println("Length of first end points is less than length of second end points");
 		else
-			System.out.println("Both lines are not equal.");
+			System.out.println("Both lines are equal.");
+
 }
 }
 
